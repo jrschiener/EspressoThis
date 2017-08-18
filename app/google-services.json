@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "60180779947",
+    "firebase_url": "https://espressothispoc.firebaseio.com",
+    "project_id": "espressothispoc",
+    "storage_bucket": "espressothispoc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60180779947:android:76ddacfdc4f14f12",
+        "android_client_info": {
+          "package_name": "com.example.jrschiener.espressothis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60180779947-8alqh54b37qh26dr3p47oleicanee5l8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAudk3mhhZ1Ja4G78njKwTkqyjU5gV-Z-U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

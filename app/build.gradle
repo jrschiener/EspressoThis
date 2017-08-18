@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+//Spoon stuff
+apply plugin: 'spoon'
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.3'
+
+    defaultConfig {
+        applicationId "com.example.jrschiener.espressothis"
+        minSdkVersion 18
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        //Spoon code coverage requirement
+        debug {
+            testCoverageEnabled true
+        }
+    }
+}
+
+//Spoon stuff
+spoon {
+    codeCoverage = true
+    shard = false
+    grantAllPermissions = true
+}
+
+dependencies {
+
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+
+
+    androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+
+    //For Spoon screenshots
+    androidTestCompile 'com.squareup.spoon:spoon-client:1.6.4'
+
+
+}
+
+
+    repositories {
+        jcenter()
+        flatDir {
+            dirs '../aars'
+        }
+    }
+
+
+
